@@ -3,7 +3,6 @@ package com.yet.spring.core.beans;
 import java.text.DateFormat;
 
 import java.util.Date;
-import java.util.Random;
 
 public class Event {
     private DateFormat df;
@@ -11,6 +10,12 @@ public class Event {
     private int uniqueId = 0;
     private String msg;
     private Date data;
+
+    public Event(int id, Date data, String msg) {
+        this.id = id;
+        this.msg = msg;
+        this.data = data;
+    }
 
     public Event(Date data, DateFormat df) {
         this.id = getUniqueId();
