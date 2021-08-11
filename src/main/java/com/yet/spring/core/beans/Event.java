@@ -2,6 +2,7 @@ package com.yet.spring.core.beans;
 
 import java.text.DateFormat;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 public class Event {
@@ -42,5 +43,9 @@ public class Event {
                 ", data=" + df.format(data) +
                 ", msg='" + msg + '\'' +
                 '}';
+    }
+
+    public static boolean isDay(){
+        return (LocalTime.now().getHour() < 17 && LocalTime.now().getHour()  > 8);
     }
 }
